@@ -105,11 +105,11 @@ class GameWindow < Gosu::Window
     (0...(@width/10)).each do |x|
       tmp = []
       (0...(@height/10)).each do |y|
-        tmp.push Cell.new(  [[x*10, y*10,],
-                                  [(x*10 + 10), (y*10)],
-                                  [(x*10), (y*10 + 10)],
-                                  [(x*10 + 10), (y*10 + 10)]],
-                                  rand(2).eql?(1) ? 0xffffffff : 0x00000000)
+        tmp.push Cell.new([[x*10, y*10,],
+                          [(x*10 + 10), (y*10)],
+                          [(x*10), (y*10 + 10)],
+                          [(x*10 + 10), (y*10 + 10)]],
+                          rand(2).eql?(1) ? 0xffffffff : 0x00000000)
       end
       @cells.push(tmp)
     end
